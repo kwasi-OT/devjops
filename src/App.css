@@ -15,12 +15,13 @@ body {
 .myApp {
   width: 100%;
   height: fit-content;
+  height: -moz-fit-content;
 }
 
-.mobileMenu {
+/* .mobileMenu {
   width: fit-content;
   height: fit-content;
-}
+} */
 
 .fa-bars {
   font-size: 1.5rem;
@@ -33,6 +34,7 @@ body {
 .header {
   width: 100%;
   height: 7rem;
+  margin-bottom: 4rem;
   background-color: #5964E0;
 }
 
@@ -46,25 +48,39 @@ body {
 }
 
 .joblist {
-  width: 80%;
+  width: 90%;
   height: fit-content;
   margin: 0 auto;
+  padding: 2rem;
 }
 
-.jobcard {
+.jobs {
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  gap: 1.5rem;
   height: fit-content;
+  height: -moz-fit-content;
+  padding: 3.5rem 2.2rem 2.8rem;
+  border-radius: 0.5rem;
+}
+
+.jobCard {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .logo {
-  width: 2.4rem;
-  height: 1.9rem;
-  padding: 0.6rem;
-  border-radius: 0.6rem;
+  width: 3.4rem;
+  height: 3.3rem;
+  padding: 1rem 0.7rem;
+  border-radius: 0.9rem;
+  display: block;
+  position: relative;
+  top: 1.7rem;
+  left: 2.3rem;
 }
 
 .timePosted {
@@ -83,4 +99,29 @@ body {
   font-weight: 700;
   font-size: 0.86rem;
   color: #5964E0;
+  padding-top: 1.8rem;
+}
+
+
+/* tablet settings */
+
+@media (min-width: 690px) and (max-width: 908px) {
+  .jobCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    gap: 1.5rem;
+  }
+}
+
+
+/* desktop settings */
+
+@media (min-width: 909px) {
+  .jobCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    gap: 1.5rem;
+  }
 }

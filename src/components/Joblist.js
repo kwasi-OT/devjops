@@ -8,7 +8,7 @@ function Joblist() {
 
     const jobList = Data.map(job => <Jobs key = {job.id} job = {job} />);
     return (
-        <div>
+        <div className='jobCard'>
             {jobList}
         </div>
     );
