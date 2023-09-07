@@ -2,6 +2,7 @@ import './App.css';
 import Joblist from './components/Joblist';
 
 
+
 function App() {
   return (
     <div className="myApp">
@@ -9,7 +10,9 @@ function App() {
         <div>
           <h2>devjobs</h2>
         </div>
-        <div></div>
+        <div>
+        
+        </div>
       </div>
       <div className='joblist'>
         <Joblist />
