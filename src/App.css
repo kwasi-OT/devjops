@@ -69,7 +69,14 @@ body {
 
 .jobCard {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.jobs:hover {
+  box-shadow: 2px 6px 13px 7px rgba(219,213,213,0.75);
+  -webkit-box-shadow: 2px 6px 13px 7px rgba(219,213,213,0.75);
+  -moz-box-shadow: 2px 6px 13px 7px rgba(219,213,213,0.75);
 }
 
 .logo {
