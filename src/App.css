@@ -12,6 +12,17 @@ body {
   background: #f4f6f8;
 }
 
+.myApp {
+  width: 100%;
+  height: fit-content;
+}
+
+.joblist {
+  width: 80%;
+  height: fit-content;
+  margin: 0 auto;
+}
+
 .jobcard {
   background-color: #fff;
   display: flex;
