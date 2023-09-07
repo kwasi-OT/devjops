@@ -4,9 +4,9 @@ import React from 'react';
 function Jobs({job}) {
 
     return (
-        <div>
+        <div className='jobCard'>
             <img className='logo' src={job.logo} alt='logo' style={{backgroundColor: job.logoBackground}}/>
-            <div className='jobs'>
+            <div className='jobsContent'>
                 <div className='timePosted'>
                     <p>{job.postedAt}</p>
                     <p>.</p>

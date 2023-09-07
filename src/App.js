@@ -1,6 +1,6 @@
 import './App.css';
 import Joblist from './components/Joblist';
-// import fontawesome from './bars-solid.svg';
+
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
           <div className='headingText'>
             <h2>devjobs</h2>
           </div>
-          <div className='mobileMenu'>
+          <div>
             <i className="fa-solid fa-bars" style={{color: '#ffffff'}}></i>
           </div>
         </div>

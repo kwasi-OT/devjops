@@ -18,11 +18,6 @@ body {
   height: -moz-fit-content;
 }
 
-/* .mobileMenu {
-  width: fit-content;
-  height: fit-content;
-} */
-
 .fa-bars {
   font-size: 1.5rem;
 }
@@ -50,11 +45,12 @@ body {
 .joblist {
   width: 90%;
   height: fit-content;
+  height: -moz-fit-content;
   margin: 0 auto;
   padding: 2rem;
 }
 
-.jobs {
+.jobsContent {
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -67,13 +63,13 @@ body {
   border-radius: 0.5rem;
 }
 
-.jobCard {
+.jobs {
   display: grid;
   gap: 1rem;
   cursor: pointer;
 }
 
-.jobs:hover {
+.jobsContent:hover {
   box-shadow: 2px 6px 13px 7px rgba(219,213,213,0.75);
   -webkit-box-shadow: 2px 6px 13px 7px rgba(219,213,213,0.75);
   -moz-box-shadow: 2px 6px 13px 7px rgba(219,213,213,0.75);
@@ -113,7 +109,7 @@ body {
 /* tablet settings */
 
 @media (min-width: 690px) and (max-width: 908px) {
-  .jobCard {
+  .jobs {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
@@ -125,7 +121,7 @@ body {
 /* desktop settings */
 
 @media (min-width: 909px) {
-  .jobCard {
+  .jobs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 2rem;
