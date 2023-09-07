@@ -1,0 +1,47 @@
+  @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Kumbh+Sans:wght@400;500;600;700&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+}
+
+.jobcard {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+}
+
+.logo {
+  width: 2.4rem;
+  height: 1.9rem;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+}
+
+.timePosted {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #6E8098;
+}
+
+.position {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.location {
+  font-weight: 700;
+  font-size: 0.86rem;
+  color: #5964E0;
+}
