@@ -27,7 +27,7 @@ class Joblist extends Component {
         <div>
             <div className='jobs'>
                 {jobList}
-                {!this.state.expanded && <button onClick={this.loadMore}>Load More</button>}
+                {!this.state.expanded && <button className='loadMore' onClick={this.loadMore}>Load More</button>}
             </div>
         </div>
         )
