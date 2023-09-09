@@ -127,6 +127,8 @@ body {
 
 .loadMore:hover {
   border: 0.1rem solid #00ffff;
+  background-color: #fff;
+  color: #5964E0;
 }
 
 
