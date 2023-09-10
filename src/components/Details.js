@@ -17,9 +17,9 @@ function Details({job}) {
                     </div>
                 </div>
                 <div className='topCompLabel'>
-                    <p className='companyD'>{job.company}</p>
-                    <p className='locationD'>{job.location}</p>
-                    <p className='timePostedD'>{job.postedAt}</p>
+                    <p className='companyD'><i class="fa-regular fa-building"></i> {job.company}</p>
+                    <p className='locationD'><i class="fa-solid fa-map-location-dot"></i> {job.location}</p>
+                    <p className='timePostedD'><i class="fa-solid fa-hourglass-half"></i> {job.postedAt}</p>
                 </div>
                 <div className='downCompLabel'>
                     <div>
