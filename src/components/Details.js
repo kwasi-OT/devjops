@@ -7,9 +7,14 @@ function Details({job}) {
         <div className='jobDetails'>
             <img className='logo' src={job.logo} alt='logo' style={{backgroundColor: job.logoBackground}}/>
             <div className='jobsContentD'>
-                <div className='title'>
-                    <p className='positionD'>{job.position}</p>
-                    <p className='contractD'>{job.contract}</p>
+                <div className='titleContainer'>
+                    <div className='title'>
+                        <p className='positionD'>{job.position}</p>
+                        <p className='contractD'>{job.contract}</p>
+                    </div>
+                    <div>
+                        <button className='apply' onClick = {() => (job.apply)}>Apply</button>
+                    </div>
                 </div>
                 <div className='topCompLabel'>
                     <p className='companyD'>{job.company}</p>
@@ -18,9 +23,9 @@ function Details({job}) {
                 </div>
                 <div className='downCompLabel'>
                     <div>
-                        <p><b>Company:</b>{job.company}</p>
-                        <p><b>Location:</b>{job.location}</p>
-                        <p><b>Website:</b>{job.website}</p>
+                        <p><b>Company:</b> {job.company}</p>
+                        <p><b>Location:</b> {job.location}</p>
+                        <p><b>Website:</b> {job.website}</p>
                     </div>
                     <p>{job.description}</p>
                     <div>
@@ -30,7 +35,7 @@ function Details({job}) {
                     <div>
                         <h3>Qualifications:</h3>
                         <ul>
-                            {job.requirements.items.map(qualification => <li>{qualification}</li>).join('')}
+                            {job.requirements.items.map(qualification => <li>{qualification}</li>)}
                         </ul>
                     </div>
                     <h3>The Role</h3>
@@ -38,7 +43,7 @@ function Details({job}) {
                     <div>
                         <h4>Key Responsibilities:</h4>
                         <ul>
-                            {job.role.items.map(responsibilities => <li>{responsibilities}</li>).join('')}
+                            {job.role.items.map(responsibilities => <li>{responsibilities}</li>)}
                         </ul>
                     </div>
                 </div>
