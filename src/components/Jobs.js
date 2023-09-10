@@ -1,10 +1,15 @@
 import React from 'react';
+import Details from './Details';
 
 
 function Jobs({job}) {
 
+    const handleClick = () => {
+        <Details/>
+    };
+
     return (
-        <div className='jobCard'>
+        <div className='jobCard' onClick={handleClick}>
             <img className='logo' src={job.logo} alt='logo' style={{backgroundColor: job.logoBackground}}/>
             <div className='jobsContent'>
                 <div className='timePosted'>
