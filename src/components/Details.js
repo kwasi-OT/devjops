@@ -17,22 +17,30 @@ function Details({job}) {
                     <p className='timePostedD'>{job.postedAt}</p>
                 </div>
                 <div className='downCompLabel'>
-                    <p>{job.company}</p>
-                    <p>{job.location}</p>
-                    <p>{job.website}</p>
+                    <div>
+                        <p><b>Company:</b>{job.company}</p>
+                        <p><b>Location:</b>{job.location}</p>
+                        <p><b>Website:</b>{job.website}</p>
+                    </div>
                     <p>{job.description}</p>
-                    <h3>Position Overview:</h3>
-                    <p>{job.requirements.content}</p>
-                    <h3>Qualifications:</h3>
-                    <ul>
-                        {job.requirements.items.map(qualification => <li>{qualification}</li>).join('')}
-                    </ul>
+                    <div>
+                        <h3>Position Overview:</h3>
+                        <p>{job.requirements.content}</p>
+                    </div>
+                    <div>
+                        <h3>Qualifications:</h3>
+                        <ul>
+                            {job.requirements.items.map(qualification => <li>{qualification}</li>).join('')}
+                        </ul>
+                    </div>
                     <h3>The Role</h3>
                     <p>{job.role.content}</p>
-                    <h4>Key Responsibilities:</h4>
-                    <ul>
-                        {job.role.items.map(responsibilities => <li>{responsibilities}</li>).join('')}
-                    </ul>
+                    <div>
+                        <h4>Key Responsibilities:</h4>
+                        <ul>
+                            {job.role.items.map(responsibilities => <li>{responsibilities}</li>).join('')}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
