@@ -19,10 +19,16 @@ class Joblist extends Component {
             expanded: true
         });
     };
+
+    selectJob = (job) => {
+        this.setState({
+            selectedJob: job
+        });
+    };
     
     render() {
         const jobList = Data.slice(0, this.state.itemsToShow).map(job =>
-            <Jobs key = {job.id} job = {job}/>);
+            <Jobs key = {job.id} job = {job} onClick = {this.selectJob}/>);
         return (
         <div>
             <div className='jobs'>
