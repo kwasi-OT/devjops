@@ -8,13 +8,13 @@ function Details({job}) {
             <img className='logo' src={job.logo} alt='logo' style={{backgroundColor: job.logoBackground}}/>
             <div className='jobsContentD'>
                 <div className='title'>
-                    <p className='position'>{job.position}</p>
-                    <p className='contract'>{job.contract}</p>
+                    <p className='positionD'>{job.position}</p>
+                    <p className='contractD'>{job.contract}</p>
                 </div>
                 <div className='topCompLabel'>
-                    <p className='company'>{job.company}</p>
-                    <p className='location'>{job.location}</p>
-                    <p className='timePosted'>{job.postedAt}</p>
+                    <p className='companyD'>{job.company}</p>
+                    <p className='locationD'>{job.location}</p>
+                    <p className='timePostedD'>{job.postedAt}</p>
                 </div>
                 <div className='downCompLabel'>
                     <p>{job.company}</p>

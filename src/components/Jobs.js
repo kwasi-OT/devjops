@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-function Jobs({job}) {
+function Jobs({job, onClick}) {
 
     return (
-        <div className='jobCard' onClick={() => {this.props.onClick(this.props.job);}}>
+        <div className='jobCard' onClick={() => onClick(job)}>
             <img className='logo' src={job.logo} alt='logo' style={{backgroundColor: job.logoBackground}}/>
             <div className='jobsContent'>
                 <div className='timePosted'>
