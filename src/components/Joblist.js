@@ -10,9 +10,25 @@ class Joblist extends Component {
         
         this.state = {
             itemsToShow: 12,
-            expanded: false
+            expanded: false,
+            showDetails: false,
+            selectedJob: null,
         };
     }
+
+    selectJob = (job) => {
+        this.setState({
+            showDetails: true,
+            selectedJob: job,
+        });
+    };
+
+    goBack = () => {
+        this.setState({
+            showDetails: false,
+            selectedJob: null,
+        });
+    };
 
     loadMore = () => {
         this.setState({
@@ -20,28 +36,37 @@ class Joblist extends Component {
             expanded: true
         });
     };
-
-    selectJob = (job) => {
-        this.setState({
-            selectedJob: job
-        });
-    };
     
     render() {
-        const jobList = Data.slice(0, this.state.itemsToShow).map(job =>
-            <Jobs key = {job.id} job = {job} onClick = {this.selectJob}/>);
-        return (
-        <div>
-            {this.state.selectedJob ? (<Details job = {this.state.selectedJob}/>) : 
-            (<div className='jobs'>
-            {jobList}
-            </div>)}
-            <div className='buttonContainer'>
-            {!this.state.expanded && <button className='loadMore' onClick={this.loadMore}>Load More</button>}
-            </div>
-        </div>
-        )
+        if(this.state.showDetails) {
+
+            return (
+                <div>
+                    <Details job = {this.state.selectedJob}/>
+                    <div className='buttonContainer'>
+                        <button className='loadMore' onClick = {this.goBack}>Back to Jobs</button>
+                    </div>
+                </div>
+            );
+        } else { 
+            const jobList = Data.slice(0, this.state.itemsToShow).map(job =>
+                <Jobs key = {job.id} job = {job} onClick = {this.selectJob}/>);
+
+            return (
+                <div>
+                    <div className='jobs'>
+                    {jobList}
+                    </div>
+                    <div className='buttonContainer'>
+                    {!this.state.expanded && <button className='loadMore' onClick={this.loadMore}>Load More</button>}
+                    </div>
+                </div>
+            );
+        }
+        
     }
-}
+}        
+
+
 
 export default Joblist;
