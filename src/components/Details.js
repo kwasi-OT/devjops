@@ -5,7 +5,7 @@ function Details({job}) {
 
     return (
         <div className='jobDetails'>
-            <img className='logo' src={job.logo} alt='logo' style={{backgroundColor: job.logoBackground}}/>
+            <img className='logoD' src={job.logo} alt='logo' style={{backgroundColor: job.logoBackground}}/>
             <div className='jobsContentD'>
                 <div className='titleContainer'>
                     <div className='title'>
@@ -13,13 +13,13 @@ function Details({job}) {
                         <p className='contractD'>{job.contract}</p>
                     </div>
                     <div>
-                        <button className='apply' onClick = {() => (job.apply)}>Apply</button>
+                        <button className='apply'>Apply</button>
                     </div>
                 </div>
                 <div className='topCompLabel'>
-                    <p className='companyD'><i class="fa-regular fa-building"></i> {job.company}</p>
-                    <p className='locationD'><i class="fa-solid fa-map-location-dot"></i> {job.location}</p>
-                    <p className='timePostedD'><i class="fa-solid fa-hourglass-half"></i> {job.postedAt}</p>
+                    <p className='companyD'><i className="fa-regular fa-building"></i> {job.company}</p>
+                    <p className='locationD'><i className="fa-solid fa-map-location-dot"></i> {job.location}</p>
+                    <p className='timePostedD'><i className="fa-solid fa-hourglass-half"></i> {job.postedAt}</p>
                 </div>
                 <div className='downCompLabel'>
                     <div>

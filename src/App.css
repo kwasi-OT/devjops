@@ -133,7 +133,7 @@ body {
   color: #5964E0;
 }
 
-/* details page settings */
+/* details component settings */
 
 .jobsContentD {
   background-color: #fff;
@@ -171,6 +171,17 @@ body {
 .title {
   display: flex;
   gap: 1rem;
+}
+
+.logoD {
+  width: 5.6rem;
+  height: 5.3rem;
+  padding: 1rem 0.7rem;
+  border-radius: 0.9rem;
+  display: block;
+  position: relative;
+  top: 2.5rem;
+  left: 2.3rem;
 }
 
 

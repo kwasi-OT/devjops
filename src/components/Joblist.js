@@ -39,10 +39,10 @@ class Joblist extends Component {
     
     render() {
         if(this.state.showDetails) {
-
+            const details = <Details key={Details.id} job = {this.state.selectedJob}/>
             return (
                 <div>
-                    <Details job = {this.state.selectedJob}/>
+                    {details}
                     <div className='buttonContainer'>
                         <button className='loadMore' onClick = {this.goBack}>Back to Jobs</button>
                     </div>
