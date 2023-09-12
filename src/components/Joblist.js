@@ -39,7 +39,7 @@ class Joblist extends Component {
     
     render() {
         if(this.state.showDetails) {
-            const details = <Details key={Details.id} job = {this.state.selectedJob}/>
+            const details = <Details job = {this.state.selectedJob}/>
             return (
                 <div>
                     {details}

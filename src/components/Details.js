@@ -35,7 +35,7 @@ function Details({job}) {
                     <div>
                         <h3>Qualifications:</h3>
                         <ul>
-                            {job.requirements.items.map(qualification => <li>{qualification}</li>)}
+                            {job.requirements.items.map(qualification => <li key = {qualification.id}>{qualification}</li>)}
                         </ul>
                     </div>
                     <h3>The Role</h3>
@@ -43,7 +43,7 @@ function Details({job}) {
                     <div>
                         <h4>Key Responsibilities:</h4>
                         <ul>
-                            {job.role.items.map(responsibilities => <li>{responsibilities}</li>)}
+                            {job.role.items.map(responsibilities => <li key = {responsibilities.id}>{responsibilities}</li>)}
                         </ul>
                     </div>
                 </div>
